@@ -25,8 +25,12 @@ app.get('/',(req, res)=>{
 app.post('/',(req,res)=>{
     if(req.files){
         console.log(req.files)
-    }
-})
+        const file = req.files.file;//req.file.〇〇の部分はindex.htmlのinputタグのname属性と同じにする。
+        console.log('hoge');
+        const filename =file.name;
+        console.log(filename);
+};
+});
 
 
 //ポートの読み込み
