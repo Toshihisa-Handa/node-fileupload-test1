@@ -9,7 +9,7 @@ const upload = require('express-fileupload')
 //publicフォルダ内のcssや画像フォルダの読み取りを可能にする
 app.use(express.static('public'));
 
-
+//fileuploadeの使用を可能にする
 app.use(upload());
 
 
