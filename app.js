@@ -29,6 +29,14 @@ app.post('/',(req,res)=>{
         console.log('hoge');
         const filename =file.name;
         console.log(filename);
+
+        file.mv('./uploads/'+filename,(error)=>{
+            if(error){
+                res.send(error)
+            }else{
+                res.send("File Uploaded")
+            }
+        })
 };
 });
 
