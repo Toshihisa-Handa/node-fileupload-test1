@@ -14,9 +14,19 @@ app.use(upload());
 
 
 //ルーティングを定義
+
+//getのルーティング
 app.get('/',(req, res)=>{
     res.sendFile(__dirname +'/index.html')
 });
+
+
+//postのルーティング
+app.post('/',(req,res)=>{
+    if(req.files){
+        console.log(req.files)
+    }
+})
 
 
 //ポートの読み込み
