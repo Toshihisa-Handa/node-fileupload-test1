@@ -9,8 +9,6 @@ app.use(express.static('public'));
 
 //ルーティングを定義
 app.get('/',(req, res)=>{
-    //res.sendで簡易的に文字表示
-    // res.send('hello');
     res.render('top.ejs')
 });
 
